@@ -18,7 +18,6 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-
 </head>
 
 <body>
@@ -33,7 +32,14 @@
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                        Offcanvas
+                        @auth
+                            
+                        @endauth
+                        @guest
+                        Menu
+                        @endguest
+
+
                     </h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
@@ -88,7 +94,7 @@
 
 
 
-<footer class="py-4 mt-5 fixed-bottom">
+<footer class="">
     @yield('footer')
 </footer>
     

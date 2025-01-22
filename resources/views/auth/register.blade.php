@@ -31,6 +31,7 @@
                             Az email címnek '.com' vagy '.hu' végződéssel kell rendelkeznie.
                         </div>
                     </div>
+                    
                     <script>
                         const emailInput = document.getElementById('RegEmail');
                         const atError = document.getElementById('atError');
@@ -57,7 +58,7 @@
 
                     <div class="mb-3">
                         <label for="Jelszo" class="form-label">Jelszó</label>
-                        <input type="Password" class="form-control" id="Jelszó" name="Jelszó" required>
+                        <input type="Password" class="form-control" id="Jelszo" name="Jelszo" required>
                         <div class="strength-bar">
                             <div class="bar" id="strength-bar"></div>
                         </div>
@@ -65,8 +66,7 @@
                     </div>
 
                     <script>
-
-                        const passwordField = document.getElementById("Jelszó");
+                        const passwordField = document.getElementById("Jelszo");
                         const strengthBar = document.getElementById("strength-bar");
                         const strengthText = document.getElementById("strength-text");
 
@@ -115,9 +115,7 @@
                                     strengthText.textContent = "";
                             }
                         }
-
                     </script>
-
                     <div class="mb-3">
                         <label for="Telefonszam" class="form-label">Telefonszám</label>
                         <input type="text" class="form-control" id="Telefonszam" name="Telefonszam" required>
@@ -131,8 +129,6 @@
                             <option value="A2">A2</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
                         </select>
                     </div>
                     <div class="modal-footer">
@@ -141,20 +137,6 @@
                 </form>
             </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- Registration Modal -->
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Regisztráció</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            
         </div>
     </div>
 </div>

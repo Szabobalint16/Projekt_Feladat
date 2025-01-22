@@ -1,5 +1,5 @@
 
-
+@section("footer")
 <footer>
         <div class="mt-5">
             <div class="cell text-white text-center text-lg-start bg-primary">
@@ -96,3 +96,5 @@
         <!-- End of .container -->
     </footer>
     <!--          /Footre          -->
+
+@endsection
