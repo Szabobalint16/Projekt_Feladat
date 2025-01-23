@@ -16,30 +16,39 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'public/css/headerPage.css', 'public/css/mainPage.css', 'public/css/mainPage_response.css'])
 
 </head>
 
 <body>
+<header id="header">
     <nav class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Navbar</a>
+            <div class="d-flex">
+                <a class="navbar-brand" href="#">
+                    <img src="kepek/kep.jpg" alt="" width="80" height="40">
+                </a>
+                @auth
+                    <h2 style="color:red; padding-top:5px;">User neve</h2>
+                @endauth
+                @guest
+                    <h2 style="color:white; padding-top:5px;"></h2>
+                @endguest
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            <div class="offcanvas offcanvas-end menu" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                         @auth
-                            
+                            Menu'Simon
                         @endauth
                         @guest
-                        Menu
+                            Menu
                         @endguest
-
-
                     </h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
@@ -47,16 +56,14 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link active" aria-current="page" href="/">Főoldal</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Dropdown</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
                                 <a class="dropdown-item" href="#">Action 1</a>
+                                <hr class="dropdownHr">
                                 <a class="dropdown-item" href="#">Action 2</a>
                             </div>
                         </li>
@@ -64,7 +71,7 @@
                             <li>
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            
+
                             <li>
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
@@ -72,7 +79,7 @@
                         @auth
                             <li>
                                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
+                                                                 document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -87,17 +94,17 @@
             </div>
         </div>
     </nav>
+</header>
+    <main class="py-4 mt-5">
+        @yield('content')
+    </main>
 
-<main class="py-4 mt-5">
-    @yield('content')
-</main>
 
 
+    <footer class="">
+        @yield('footer')
+    </footer>
 
-<footer class="">
-    @yield('footer')
-</footer>
-    
 
 
 </body>
