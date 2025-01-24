@@ -2,7 +2,7 @@
 
 @section('content')
 <div class=" mx-4 mt-2">
-    <div class="row justify-content-center ">
+    <div class="justify-content-center ">
         <div id="uppictures">
             <img src="img_nature.jpg" alt="Nature" class="img-fluid">
         </div>
@@ -57,7 +57,6 @@
             </div>
         </section>
         <hr>
-
         <section>
             <div id="miert">
                 <div class="d-flex justify-content-around align-items-center mb-3">

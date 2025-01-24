@@ -16,7 +16,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'public/css/headerPage.css', 'public/css/mainPage.css', 'public/css/mainPage_response.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'public/css/headerPage.css', 'public/css/mainPage.css', 'public/css/mainPage_response_timeLime.css' , 'public/css/mainPage_response_cardsAndP_W.css'])
 
 </head>
 
